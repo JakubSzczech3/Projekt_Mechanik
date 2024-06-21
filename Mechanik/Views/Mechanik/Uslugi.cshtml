@@ -1,0 +1,13 @@
+﻿@model List<MechanikKonsola.Entities.Uslugi>;
+
+    <div>
+        <table>
+        @foreach(var item in Model){
+            <tr> <td>@item.ID. </td><td> @item.NazwaUslugi </td> </tr>
+
+        }
+
+        </table>
+
+    <a class="btn btn-outline-success float-right" asp-action="Index">Powrót</a>
+    </div>

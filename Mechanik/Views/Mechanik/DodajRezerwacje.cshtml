@@ -1,0 +1,18 @@
+﻿@model MechanikKonsola.Comands.DodajRezerwacjeKomenda;
+
+<form method="post">
+    <label asp-for="Imie">Imie</label>
+    <input asp-for="Imie" type="text" class="form-control">
+
+    <label asp-for="Nazwisko">Nazwisko</label>
+    <input asp-for="Nazwisko" type="text" class="form-control">
+
+    <label asp-for="Data">Data</label>
+    <input asp-for="Data" type="datetime" class="form-control">
+
+    <label asp-for="NrTelefonu">Numer Telefonu</label>
+    <input asp-for="NrTelefonu" type="number" class="form-control">
+
+    <button type="submit">Zarezerwuj</button>
+</form>
+<a class="btn btn-outline-success float-right" asp-action="Index">Powrót</a>
