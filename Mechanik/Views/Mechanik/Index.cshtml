@@ -1,19 +1,19 @@
-﻿<div> 
-<table>
-    <tr>
-        <td>
-            <a class="btn btn-outline-success float-right" asp-action="DodajRezerwacje">Zarezerwuj Termin!!!</a>
-        </td>
-        <td>
-        <a class="btn btn-outline-success float-right" asp-action="Uslugi">Sprawdź nasze usługi!</a>
-        </td>
-        <td>
-        <a class="btn btn-outline-success float-right" asp-action="Czesci">Zakup Czesci</a>
-        </td>
-    </tr>
+﻿<div class="header">
+    <h1 style="font-weight: bold;">Witaj na MECHANIK!</h1>
+    <h3>Na tej stronie możesz umówić się na wizytę u mechanika bądź zakupić części potrzebne do twojego samochodu.</h3>
+</div>
 
-
-</table>
-
-    
+<div class="main">
+    <button class="btn btn-outline-success" onclick="location.href='@Url.Action("DodajRezerwacje", "Mechanik")'">
+        <img src="@Url.Content("~/Zdjecia/Kalendarz.png")" alt="Zarezerwuj Termin">
+        <span>Zarezerwuj Termin</span>
+    </button>
+    <button class="btn btn-outline-success" onclick="location.href='@Url.Action("Uslugi", "Mechanik")'">
+        <img src="@Url.Content("~/Zdjecia/Uscisk.png")" alt="Sprawdź nasze usługi">
+        <span>Sprawdź nasze usługi</span>
+    </button>
+    <button class="btn btn-outline-success" onclick="location.href='@Url.Action("Czesci", "Mechanik")'">
+        <img src="@Url.Content("~/Zdjecia/Klucze.png")" alt="Zakup Części">
+        <span>Zakup Części</span>
+    </button>
 </div>

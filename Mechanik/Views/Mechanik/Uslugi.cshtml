@@ -1,13 +1,23 @@
 ﻿@model List<MechanikKonsola.Entities.Uslugi>;
 
-    <div>
-        <table>
-        @foreach(var item in Model){
-            <tr> <td>@item.ID. </td><td> @item.NazwaUslugi </td> </tr>
-
-        }
-
-        </table>
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nazwa Usługi</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.NazwaUslugi</td>
+                    <td><a class="btn btn-outline-success" asp-action="DodajRezerwacje">Rezerwuj termin</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
     <a class="btn btn-outline-success float-right" asp-action="Index">Powrót</a>
-    </div>
+</div>

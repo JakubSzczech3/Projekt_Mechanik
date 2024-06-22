@@ -8,7 +8,12 @@
     <input asp-for="Nazwisko" type="text" class="form-control">
 
     <label asp-for="Data">Data</label>
-    <input asp-for="Data" type="datetime" class="form-control">
+    <div class="input-group date" id="datepicker" data-target-input="nearest">
+        <input asp-for="Data" type="text" class="form-control datetimepicker-input" data-target="#datepicker" />
+        <div class="input-group-append" data-target="#datepicker" data-toggle="datepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+        </div>
+    </div>
 
     <label asp-for="NrTelefonu">Numer Telefonu</label>
     <input asp-for="NrTelefonu" type="number" class="form-control">
@@ -16,3 +21,18 @@
     <button type="submit">Zarezerwuj</button>
 </form>
 <a class="btn btn-outline-success float-right" asp-action="Index">Powrót</a>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#datepicker').datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true,
+                todayBtn: "linked",
+                clearBtn: true,
+                todayHighlight: true,
+                orientation: "bottom auto",
+                language: 'pl'
+            });
+        });
+    </script>
+}

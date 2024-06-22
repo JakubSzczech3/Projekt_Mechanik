@@ -15,7 +15,7 @@ namespace MechanikKonsola
         public DbSet<SprzedazCzesci> Czesci{ get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=JAKUB;Initial Catalog=Mechanik;Integrated Security=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer(@"Data Source=DOM;Initial Catalog=Mechanik;Integrated Security=True;TrustServerCertificate=True;");
         }
 
     }
